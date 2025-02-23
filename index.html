@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.OptiMesh.com</title>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
@@ -61,7 +60,7 @@
 
                 </div>
                 <div class="hero-image-wrapper">
-                    <img src="new_theme.png" alt="Image of butterfly" class="hero-wrapper" style="max-width: 500px; height: auto;">
+                    <img src="new_theme.png" alt="Image of buildings" class="hero-wrapper" style="max-width: 500px; height: auto;">
                 </div>
             </div>
         </section>
@@ -74,7 +73,7 @@
                 <div class="about-details">
                     <h2 class="section-title">About us</h2>
                     <p class="text">
-                        OptiMesh enhances workflow with intelligent scheduling, hierarchical communication, and cloud-based buckets, ensuring seamless collaboration through optimized algorithms and an intuitive UI.
+                        OptiMesh revolutionizes online education by addressing the challenge of student distractions in remote learning. Traditional classrooms ensure engagement, but virtual environments often lead to reduced focus. OptiMesh provides real-time screen monitoring, allowing teachers to oversee student activity and maintain attention during online classes. By bridging the gap between physical and digital learning, OptiMesh enhances discipline, productivity, and the overall effectiveness of virtual education.
                     </p>
     
                     <div class="social-link-list">
@@ -85,6 +84,22 @@
                 </div>
             </div>
         </section>
+
+        <section class="connect-section" id="connect">
+            <h2 class="section-title">Connect</h2>
+            <div class="section-content">
+                <div class="holder2">
+                    <input type="text" id="ipInput" placeholder="Enter Server IP (e.g., 192.168.1.100)" class="enter-info">
+                    <button onclick="connectToServer()" class="button">Connect</button>
+                    <button onclick="disconnectFromServer()" class="button">Disconnect</button>
+                </div>
+                <div class="holder">
+                    <canvas id="screenCanvas"></canvas>
+                </div>
+
+            </div>
+        </section>
+
     
         <section class="menu-section" id="menu">
             <h2 class="section-title">Features</h2>
