@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Screen Viewer</title>
+    <style>
+        body { text-align: center; }
+        canvas { width: 80vw; height: 80vh; border: 2px solid black; }
+    </style>
+</head>
+<body>
+    <h2>Remote Screen Viewer</h2>
+    <input type="text" id="ipInput" placeholder="Enter Server IP (e.g., 192.168.1.100)">
+    <button onclick="connectToServer()">Connect</button>
+    <canvas id="screenCanvas"></canvas>
+
+    <script>
+        let socket;
+        const canvas = document.getElementById("screenCanvas");
+        const ctx = canvas.getContext("2d");
+
+        function connectToServer() {
+            const ip = document.getElementById("ipInput").value;
+            if (!ip) {
+                alert("Please enter a valid IP address!");
+                return;
+            }
+
+            socket = new WebSocket(`ws://${ip}:8765`);
+            socket.binaryType = "arraybuffer";
+
+            socket.onmessage = (event) => {
+                const blob = new Blob([event.data], { type: "image/jpeg" });
+                const img = new Image();
+                img.src = URL.createObjectURL(blob);
+
+                img.onload = () => {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    URL.revokeObjectURL(img.src);
+                };
+            };
+
+            socket.onclose = () => console.log("Connection closed");
+        }
+    </script>
+</body>
+</html>
