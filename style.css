@@ -174,6 +174,7 @@ header .navbar
         color: var(--white-color);
         background: #1d325c;;
         min-height: 100vh;
+        padding-top: 1rem;
     }
 
     .connect-section .section-content
@@ -195,6 +196,7 @@ header .navbar
 
     .connect-section .section-content .holder
     {
+        
         background: url(tv_background.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
