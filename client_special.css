@@ -1,0 +1,140 @@
+
+  :root
+{
+    --white-color:#ffff;
+    --dark-color:#052158;
+     --primary-color: #3645e9; 
+     --secondary-color: #70c1ff; 
+     --light-pink-color: #ffddf6; 
+     --medium-gray-color: #989898; 
+
+
+    --font-size-s: 0.9rem; 
+    --font-size-n: 1rem; 
+    --font-size-m: 1.12rem; 
+    --font-size-l: 1.5rem; 
+    --font-size-xl: 2rem; 
+    --font-size-xxl: 2.3rem; 
+
+
+    --font-weight-normal: 400;
+     --font-weight-medium: 500; 
+     --font-weight-semibold: 600;
+      --font-weight-bold: 700; 
+/* Border radius */ 
+
+    --border-radius-s: 8px;
+     --border-radius-m: 30px; 
+     --border-radius-circle: 50%; 
+
+        --site-max-width: 1300px; 
+
+}
+
+.clientsContainer{
+    display: flex;
+    align-items: center;
+
+}
+
+.client {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    background-color: #B7B1F2;
+    border-radius: var(--border-radius-m);
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .connections
+  {
+    color: white;
+  }
+
+  .chat-box {
+    height: 150px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  .container
+  {
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  .message_log
+  {
+    border-radius: var(--border-radius-s);
+    color: black;
+  }
+
+  .space_class
+  {
+    margin-top: 20px;
+  }
+  .space_class2
+  {
+    margin-top: 5px;
+  }
+
+  .message_box
+  {
+    border-radius: var(--border-radius-m);
+    padding: 10px;
+  }
+
+
+  .highlight
+  {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .command_button
+  {
+          padding: 5px 9px;
+          color: var(--dark-color);
+          font-size: var(--font-size-s);
+          border-radius: var(--border-radius-m);
+          transition: 0.3s ease;
+  }
+
+  .command_button:hover
+  {
+      color: var(--white-color);
+          background: var(--secondary-color);
+  }
+  .connect_button
+  {
+          padding: 5px 9px;
+          color: var(--dark-color);
+          font-size: var(--font-size-s);
+          border-radius: var(--border-radius-m);
+          transition: 0.3s ease;
+  }
+
+  .connect_button:hover
+  {
+      color: var(--white-color);
+          background: green;
+  }
+  .disconnect_button
+  {
+          padding: 5px 9px;
+          color: var(--dark-color);
+          font-size: var(--font-size-s);
+          border-radius: var(--border-radius-m);
+          transition: 0.3s ease;
+  }
+
+  .disconnect_button:hover
+  {
+      color: var(--white-color);
+          background: red;
+  }

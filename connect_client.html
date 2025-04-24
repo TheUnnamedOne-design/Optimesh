@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Multi-Client P2P Chat</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles_client.css">
+        <link rel="stylesheet" href="client_special.css">
+        <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+        <style>
+            #network { width: 100%; height: 500px; border: 1px solid black; background-color: white;}
+        </style>
+
+      </head>
+      <body>
+
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <h2 class="logo-text">OptiMesh</h2>
+                </a>
+                 
+                <ul class="nav-menu">
+    
+                    <button id="menu-close-button" class="fas fa-times"></button>
+    
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#connect" class="nav-link">Connect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#menu" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#team" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="section-content">
+                    <div class="hero-details">
+                        <h2 class="title">OptiMesh - Handle clients with ease</h2>
+                        <h3 class="subtitle">Set up and simulate your own networks!</h3>
+                        <p class="description">Your very own graph and network visualiser!
+                        </p>
+    
+                        <div class="buttons">
+                            <a href="#visualise" class="button Connect">Visualise</a>
+                           
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="Flux_Dev_Create_a_high_definition_futuristic_image_featuring_a_3.png" alt="Image of buildings" class="hero-wrapper" style="max-width: 500px; height: auto;">
+                    </div>
+                </div>
+            </section>
+
+            <section class="client-section" id="client">
+                <div class="section-content">
+                    <div>
+                        <h2 class="section-title modify_title">ADD CLIENTS</h2>
+                        <center><button onclick="addClient()" id="add_new_client">+ Add New Client</button></center>
+                        <div id="clientsContainer"></div>
+                    </div>
+            </section>
+    
+            <section class="visualise-section" id="visualise">
+                <div class="section-content">
+                    <div>
+                        <h2 class="section-title">Visualise graph</h2>
+                        <h2>Live P2P Network Graph</h2>
+                            <div id="network"></div>
+                            </div>
+                    </div>
+            </section>
+
+           
+
+        </main>
+    
+            <script src="graph.js"></script>
+            <script src="script2.js"></script>
+            <script src="script_client.js"></script>
+        
+       </body>
+</html>
